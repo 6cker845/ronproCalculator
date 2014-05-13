@@ -21,7 +21,7 @@ var multiply = function(a, b){
 
 var isOperator = function(operator){
 	return operator == "コーラ" || operator == "スプライト" || operator == "オレンジジュース" ||
-	operator == "ビール" || operator == "ココア";
+	operator == "ビール" || operator == "ココア" || operator == "スタバ新作:チャンキークッキーフラペチーノ";
 };
 
 var isNumber = function(a){
@@ -30,7 +30,7 @@ var isNumber = function(a){
 };
 
 var isMultiplication = function(operator, a){
-	return operator == "コーラ" && isNumber(a)|| operator == "スプライト" && isNumber(a)|| operator == "オレンジジュース" && isNumber(a) || operator == "ビール" && isNumber(a) || operator == "ココア" && isNumber(a);
+	return operator == "コーラ" && isNumber(a)|| operator == "スプライト" && isNumber(a)|| operator == "オレンジジュース" && isNumber(a) || operator == "ビール" && isNumber(a) || operator == "ココア" && isNumber(a) || operator == "スタバ新作:チャンキークッキーフラペチーノ" && isNumber(a);
 }
 
 var isReady = function(operator, a, b){
@@ -56,6 +56,8 @@ var startCalc = function(){
 			result = multiply(200, operandA);
 		} else if (operator == "ココア"){
 			result = multiply(2060, operandA);
+		} else if (operator == "スタバ新作:チャンキークッキーフラペチーノ"){
+			result = multiply(553, operandA);
 		}
 		showResult(result);
 	}else{
